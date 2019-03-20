@@ -4,7 +4,8 @@ deb:
 setools-patch:
 	cd setools; \
 		git checkout 4.0.0-beta; \
-		git apply ../patches/setools.patch;
+		git apply ../patches/setools.patch
+
 setools-build:
 	cd setools; \
 		python setup.py build

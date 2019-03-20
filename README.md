@@ -1,7 +1,7 @@
 # Android setools
 
 ## About
-This repo contains a bundled Debian package (`deb`) with the patched SELinux libaries (`libsepol`, `libselinux`) and supporting headers (`libbz2`) that allow SE for Android ("SEAndroid") v30 binary policies to be parsed. In addition, it includes a `Makefile` that will build a patched version of `setools` version 4.0.0 that exposes the following SELinux utilities:
+This repo contains a bundled Debian package (`deb`) with the patched SELinux libaries (`libsepol`, `libselinux`) and supporting headers (`libbz2`) that allow SE for Android ("SEAndroid") v30 binary policy files to be parsed. In addition, it includes a `Makefile` that will build a patched version of `setools` version 4.0.0 that exposes the following SELinux utilities:
 
 * sesearch
 * sediff
@@ -33,3 +33,9 @@ Next, clone this repo and use the bundled `Makefile` to build and install:
 	cd android-setools
 	make build
 	sudo make install
+
+## Usage
+After installing, you can use `seinfo` or `sesearch` to perform queries against a device's `sepolicy` file:
+
+	adb pull /sepolicy
+	sesearch -A -s shell -c file -p write sepolicy
