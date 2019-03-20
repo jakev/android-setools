@@ -1,0 +1,4 @@
+[submodule "setools"]
+	path = setools
+	url = https://github.com/SELinuxProject/setools.git
+	branch = 4.0.0-beta
