@@ -6,7 +6,7 @@ This repo contains a bundled Debian package (`deb`) with the patched SELinux lib
 * sesearch
 * sediff
 
-All other `setools` binaries (such as any GUI compoents are _not tested_.
+All other `setools` binaries (such as any GUI components) are _not tested_.
 
 ## Supported Platforms
 Building has been testing on:
@@ -29,5 +29,7 @@ First, install dependences:
 
 Next, clone this repo and use the bundled `Makefile` to build and install:
 
+	git clone --recursive https://github.com/jakev/android-setools.git
+	cd android-setools
 	make build
 	sudo make install
