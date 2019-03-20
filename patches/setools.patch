@@ -72,7 +72,7 @@ index 519c844..4f577fe 100644
  		if (!tmp_name) {
  			error = errno;
 diff --git a/setup.py b/setup.py
-index 5f89271..c029d31 100644
+index 5f89271..004e24c 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -118,7 +118,6 @@ ext_py_mods = [Extension('setools.policyrep._qpol',
@@ -83,3 +83,11 @@ index 5f89271..c029d31 100644
                                               '-Wstrict-prototypes',
                                               '-Wunknown-pragmas',
                                               '-Wwrite-strings',
+@@ -126,6 +125,7 @@ ext_py_mods = [Extension('setools.policyrep._qpol',
+                                              '-Wno-unused-parameter', # SWIG generates functions with unused parameters
+                                              '-Wno-cast-qual', # libsepol/libselinux uses const-to-nonconst casts
+                                              '-Wno-shadow', # SWIG generates shadow variables
++                                             '-Wno-sign-compare',
+                                              '-fno-exceptions'],
+                          extra_objects=[static_sepol],
+                          extra_link_args=['-Wl,--version-script=libqpol/libqpol.map'],
