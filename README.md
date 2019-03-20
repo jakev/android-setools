@@ -39,3 +39,6 @@ After installing, you can use `seinfo` or `sesearch` to perform queries against 
 
 	adb pull /sepolicy
 	sesearch -A -s shell -c file -p write sepolicy
+
+## Known Limitations
+Currently, only Android 6.0.0 `sepolicy` files have been tested. If you're using 8.0.0+, this tool will likely not work. Newer versions will work against this version.
