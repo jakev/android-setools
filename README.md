@@ -5,8 +5,11 @@ This repo contains a bundled Debian package (`deb`) with the patched SELinux lib
 
 * sesearch
 * sediff
+* sedta
 
 All other `setools` binaries (such as any GUI components) are _not tested_.
+
+This project is based largely on StackOverflow user `WhiteWinterWolf`'s verbose and _extremely_ helpful write-up regarding parsing v30 Android policy files. Big thanks to `WhiteWinterWolf`; I simply bundled the code together!
 
 ## Supported Platforms
 Building has been testing on:
@@ -33,6 +36,11 @@ Next, clone this repo and use the bundled `Makefile` to build and install:
 	cd android-setools
 	make build
 	sudo make install
+
+If for some reason your build fails, consider using the `clean` task to revert to a clean slate:
+
+	make clean
+	...
 
 ## Usage
 After installing, you can use `seinfo` or `sesearch` to perform queries against a device's `sepolicy` file:

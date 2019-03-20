@@ -14,6 +14,10 @@ setools-install:
 	cd setools; \
 		sudo python setup.py install
 
+clean:
+	cd setools; \
+		git reset --hard
+
 build: deb setools-patch setools-build
 
 install: setools-install
