@@ -1,7 +1,0 @@
-Package: android-setools
-Architecture: all
-Maintainer: Jake Valletta
-Depends: debconf (>= 0.5.00), swig, flex, bison, python-dev, python-setuptools, python-networkx
-Priority: optional
-Version: 0.1
-Description: SELinux core libraries (libselinux, libsepol) compiled for Android v30 policies. 
